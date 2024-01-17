@@ -1,16 +1,19 @@
+import { IMG_URL } from "../utils/common";
+
 const RestaurantCard = (props) => {
-	const { name, image, rating, cuisine, cft } = props.cardinfo?.info;
+	const { name, cloudinaryImageId, avgRating, cuisines, costForTwo } =
+		props?.cardinfo?.info;
 	return (
 		<div className="resCard">
 			<img
 				className="cardLogo"
 				alt="icecream"
-				src={image.url}
+				src={IMG_URL + cloudinaryImageId}
 			></img>
 			<h3>{name}</h3>
-			<h3>{rating.aggregate_rating + " stars"}</h3>
-			<h4>{cuisine.map((res) => res.name).join(", ")}</h4>
-			<h4>{cft.text}</h4>
+			<h3>{avgRating + " stars"}</h3>
+			<h4>{cuisines.join(", ")}</h4>
+			<h4>{costForTwo}</h4>
 		</div>
 	);
 };

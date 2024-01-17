@@ -43,3 +43,15 @@ ul>li{
 .filter-btn{
     margin: 10px;
 }
+
+.shimmer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.shimmerCard{
+    width: 220px;
+    padding: 2px 5px;
+    background-color: #f0f0f0;
+    margin: 10px;
+    height: 200px;
+}
