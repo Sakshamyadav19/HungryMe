@@ -13,7 +13,7 @@ const Body = () => {
 
 	const fetchData = async () => {
 		const api = await fetch(
-			"https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+			"https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
 		);
 		const res_json = await api.json();
 		const data =
@@ -43,8 +43,8 @@ const Body = () => {
 				/>
 				<button
 					onClick={() => {
-						setRestaurantList(
-							restaurantList.filter(
+						setFilteredRestaurantList(
+							filteredRestaurant.filter(
 								(restaurant) => restaurant?.info?.avgRating > 4.3
 							)
 						);
