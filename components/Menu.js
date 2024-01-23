@@ -1,25 +1,11 @@
-import { useEffect, useState } from "react";
+import useGetMenu from "../utils/useGetMenu";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 
 const Menu = () => {
-	const [menu, setMenu] = useState([]);
 	const { id } = useParams();
 
-	useEffect(() => {
-		getMenu();
-	}, []);
-
-	const getMenu = async () => {
-		const data = await fetch(
-			"https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=" +
-				id +
-				"&catalog_qa=undefined&submitAction=ENTER"
-		);
-		const dataJson = await data.json();
-		console.log(dataJson);
-		setMenu(dataJson.data);
-	};
+	const menu = useGetMenu(id);
 
 	if (menu.length === 0) return <Shimmer />;
 
@@ -38,7 +24,7 @@ const Menu = () => {
 
 			<ul>
 				{item.map((item) => (
-					<li id="{item.card.info.id}">{item.card.info.name}</li>
+					<li key="{item.card.info.id}">{item.card.info.name}</li>
 				))}
 			</ul>
 		</div>

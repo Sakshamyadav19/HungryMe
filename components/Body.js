@@ -1,4 +1,3 @@
-import { restaurants } from "../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
@@ -21,7 +20,6 @@ const Body = () => {
 				?.restaurants;
 		setRestaurantList(data);
 		setFilteredRestaurantList(data);
-		console.log(data);
 	};
 
 	return restaurantList.length == 0 ? (
