@@ -26,9 +26,9 @@ const Body = () => {
 		<Shimmer />
 	) : (
 		<div>
-			<div className="filter-btn">
+			<div className="flex my-2 px-2">
 				<input
-					className="searchBox"
+					className="border-2 border-black mr-10 rounded-md"
 					type="text"
 					onChange={(e) => {
 						setFilteredRestaurantList(
@@ -41,6 +41,7 @@ const Body = () => {
 					}}
 				/>
 				<button
+					className="px-2 border-2 border-black rounded-md"
 					onClick={() => {
 						setFilteredRestaurantList(
 							filteredRestaurant.filter(
@@ -52,7 +53,7 @@ const Body = () => {
 					Most Rated
 				</button>
 			</div>
-			<div className="restaurantContainer">
+			<div className="flex flex-wrap justify-start">
 				{filteredRestaurant.map((restaurant) => {
 					return (
 						<Link

@@ -8,24 +8,24 @@ const Header = () => {
 	const active = useCheckNet();
 
 	return (
-		<div id="header">
-			<div id="logo">
+		<div className="flex justify-between items-center border-y-2 border-black">
+			<div className="size-40 pt-5">
 				<img src={LOGO_URL}></img>
 			</div>
 
-			<ul className="header">
-				<li>
+			<ul className="flex justify-between font-bold ">
+				<li className="px-3">
 					<Link to="/">HOME</Link>
 				</li>
-				<li>
+				<li className="px-3">
 					<Link to="/contact">AboutUs</Link>
 				</li>
-				<li>
+				<li className="px-3">
 					<Link to="/cart">Cart</Link>
 				</li>
-				<li>Online:{active}</li>
+				<li className="px-3">Online:{active}</li>
 				<button
-					className="authButton"
+					className="px-2 border-2 border-black rounded-md"
 					onClick={() => {
 						btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
 					}}
