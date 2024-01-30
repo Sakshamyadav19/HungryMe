@@ -1,20 +1,18 @@
 const Shimmer = () => {
 	return (
-		<div className="shimmer">
-			<div className="shimmerCard"></div>
-			<div className="shimmerCard"></div>
-			<div className="shimmerCard"></div>
-			<div className="shimmerCard"></div>
-			<div className="shimmerCard"></div>
-			<div className="shimmerCard"></div>
-			<div className="shimmerCard"></div>
-			<div className="shimmerCard"></div>
-			<div className="shimmerCard"></div>
-			<div className="shimmerCard"></div>
-			<div className="shimmerCard"></div>
-			<div className="shimmerCard"></div>
-			<div className="shimmerCard"></div>
-			<div className="shimmerCard"></div>
+		<div className="flex flex-wrap justify-equally">
+			<div className="w-[220px] h-72 bg-gray-100 mt-4 p-2 mx-4"></div>
+			<div className="w-[220px] h-72 bg-gray-100 mt-4 p-2 mx-4"></div>
+			<div className="w-[220px] h-72 bg-gray-100 mt-4 p-2 mx-4"></div>
+			<div className="w-[220px] h-72 bg-gray-100 mt-4 p-2 mx-4"></div>
+			<div className="w-[220px] h-72 bg-gray-100 mt-4 p-2 mx-4"></div>
+			<div className="w-[220px] h-72 bg-gray-100 mt-4 p-2 mx-4"></div>
+			<div className="w-[220px] h-72 bg-gray-100 mt-4 p-2 mx-4"></div>
+			<div className="w-[220px] h-72 bg-gray-100 mt-4 p-2 mx-4"></div>
+			<div className="w-[220px] h-72 bg-gray-100 mt-4 p-2 mx-4"></div>
+			<div className="w-[220px] h-72 bg-gray-100 mt-4 p-2 mx-4"></div>
+			<div className="w-[220px] h-72 bg-gray-100 mt-4 p-2 mx-4"></div>
+			<div className="w-[220px] h-72 bg-gray-100 mt-4 p-2 mx-4"></div>
 		</div>
 	);
 };
