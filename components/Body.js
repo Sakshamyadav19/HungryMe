@@ -22,6 +22,7 @@ const Body = () => {
 		setFilteredRestaurantList(data);
 	};
 
+
 	return restaurantList.length == 0 ? (
 		<Shimmer />
 	) : (
@@ -53,7 +54,7 @@ const Body = () => {
 					Most Rated
 				</button>
 			</div>
-			<div className="flex flex-wrap justify-start">
+			<div className="flex flex-wrap justify-between">
 				{filteredRestaurant.map((restaurant) => {
 					return (
 						<Link
