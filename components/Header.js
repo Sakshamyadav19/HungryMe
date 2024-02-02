@@ -2,10 +2,12 @@ import { useState } from "react";
 import { LOGO_URL } from "../utils/common";
 import { Link } from "react-router-dom";
 import useCheckNet from "../utils/useCheckNet";
+import { useSelector } from "react-redux";
 const Header = () => {
 	const [btnName, setBtnName] = useState("Login");
 
 	const active = useCheckNet();
+	const cartItems=useSelector((store)=>store.cart.items)
 
 	return (
 		<div className="flex justify-between items-center border-y-2 border-black">
@@ -21,7 +23,7 @@ const Header = () => {
 					<Link to="/contact">AboutUs</Link>
 				</li>
 				<li className="px-3">
-					<Link to="/cart">Cart</Link>
+					<Link to="/cart">Cart - {cartItems.length}</Link>
 				</li>
 				<li className="px-3">Online:{active}</li>
 				<button
